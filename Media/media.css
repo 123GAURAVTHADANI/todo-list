@@ -1,0 +1,23 @@
+#container {
+  background-color: purple;
+  height: 200px;
+}
+#btn {
+  display: none;
+}
+header {
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (orientation: landscape) {
+  #container {
+    background-color: orange;
+  }
+  #btn {
+    display: block;
+  }
+  #form {
+    display: none;
+  }
+}
