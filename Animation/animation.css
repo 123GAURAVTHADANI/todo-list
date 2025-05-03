@@ -1,0 +1,72 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#container {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  position: relative;
+  /* animation-name: colorChange;
+  animation-duration: 20s; */
+  animation: colorChange 5s infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+
+  /* animation-iteration-count: infinite; */
+}
+/* 25% of animation duration */
+
+@keyframes colorChange {
+  0% {
+    background-color: orange;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: blue;
+    top: 130px;
+    left: 0px;
+  }
+  50% {
+    background-color: cadetblue;
+    top: 130px;
+    left: 130px;
+  }
+  75% {
+    background-color: aquamarine;
+    top: 0px;
+    left: 130px;
+  }
+  100% {
+    background-color: blueviolet;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+#container:hover {
+  animation-play-state: paused;
+}
+
+#outer {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+
+  /* transition: all 4s; */
+}
+/* #outer:hover { */
+/* width: 500px;
+  height: 500px; */
+/* background-color: black;
+  transform: rotate(180deg);
+  color: white;
+} */
+
+#outer:hover {
+  transform: translate(0, 200px);
+  /* transform: scale(1.2) rotate(180deg); */
+}
